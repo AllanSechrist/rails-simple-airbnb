@@ -1,17 +1,45 @@
 <div class="container">
-  <div id="main" class="my-3">
-    <h1><%= @flat.name %></h1>
-    <p><%= @flat.address %></p>
-  </div>
-  <div id="about" class="my-3">
-    <h2>About this flat</h2>
-    <p><%= @flat.description %></p>
-  </div>
-  <div id="details" class="my-3">
-    <h2>Details</h2>
-    <div class="d-flex">
-      <span class="me-3"><i class="fa-solid fa-user-group me-2"></i><%= @flat.number_of_guests %></span>
-      <span><i class="fa-solid fa-dollar-sign me-2"></i><%= @flat.price_per_night %></span>
+  <div class="row">
+    <div class="col">
+      <div id="main" class="card my-3">
+        <div class="card-body">
+          <h1><%= @flat.name %></h1>
+          <p><%= @flat.address %></p>
+        </div>
+      </div>
+      <div id="about" class="card my-3">
+        <div class="card-body">
+          <h2>About this flat</h2>
+          <p><%= @flat.description %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div id="booking" class="card my-3">
+        <div class="card-body">
+          <h3>Book This Place</h3>
+          <form action="">
+            <div class="mb-3">
+              <label for="startDate" class="form-label">From</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="endDate" class="form-label">To</label>
+              <input type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+       <div id="details" class="card my-3">
+        <div class="card-body">
+          <h2>Details</h2>
+          <div class="d-flex">
+            <span class="me-3"><i class="fa-solid fa-user-group me-2"></i><%= @flat.number_of_guests %></span>
+            <span><i class="fa-solid fa-dollar-sign me-2"></i><%= @flat.price_per_night %></span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
