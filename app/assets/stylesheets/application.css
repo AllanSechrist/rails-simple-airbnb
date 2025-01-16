@@ -17,3 +17,13 @@
  .navbar {
   background-color: #f8f9fa;
  }
+
+ #banner > img {
+  width: 100%;
+  object-fit: cover;
+ }
+
+ .info {
+  position: relative;
+  top: -100px;
+ }
